@@ -10,14 +10,15 @@
 
 #include <openssl/ssl.h>
 #include <openssl/err.h>
-#include <lua.h>
+#include <luajit-2.0/lua.h>
 
 #include "stats.h"
 #include "ae.h"
 #include "http_parser.h"
 #include "hdr_histogram.h"
 
-#define VERSION  "4.0.0"
+extern const char *VERSION;
+
 #define RECVBUF  8192
 #define SAMPLES  100000000
 
